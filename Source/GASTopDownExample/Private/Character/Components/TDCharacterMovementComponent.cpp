@@ -7,7 +7,7 @@
 #include "NiagaraFunctionLibrary.h"
 #include "AI/NavigationSystemBase.h"
 #include "Blueprint/AIBlueprintHelperLibrary.h"
-#include "Character/TDCharacter.h"
+#include "Character/TDCharacterBase.h"
 #include "GameFramework/Character.h"
 #include "Navigation/PathFollowingComponent.h"
 #include "Player/TDPlayerController.h"
@@ -24,7 +24,7 @@ void UTDCharacterMovementComponent::BeginPlay()
 {
 	Super::BeginPlay();
 
-	OwnerCharacter = Cast<ATDCharacter>(GetOwner());
+	OwnerCharacter = Cast<ATDCharacterBase>(GetOwner());
 	OwnerPlayerController = Cast<ATDPlayerController>(OwnerCharacter->GetController());
 
 	BindActions();

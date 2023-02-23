@@ -3,7 +3,7 @@
 
 #include "Player/TDPlayerController.h"
 #include "EnhancedInputSubsystems.h"
-#include "Character/TDCharacter.h"
+#include "Character/TDCharacterBase.h"
 #include "Player/TDCameraController.h"
 
 ATDPlayerController::ATDPlayerController()

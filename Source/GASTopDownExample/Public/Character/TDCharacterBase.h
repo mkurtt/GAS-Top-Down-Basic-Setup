@@ -3,7 +3,8 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
-#include "TDCharacter.generated.h"
+#include "GAS/GASCharacterBase.h"
+#include "TDCharacterBase.generated.h"
 
 UENUM()
 enum class CharacterState : uint8
@@ -15,12 +16,12 @@ enum class CharacterState : uint8
 };
 
 UCLASS()
-class GASTOPDOWNEXAMPLE_API ATDCharacter : public ACharacter
+class GASTOPDOWNEXAMPLE_API ATDCharacterBase : public AGASCharacterBase
 {
 	GENERATED_BODY()
 
 public:
-	ATDCharacter(const FObjectInitializer& ObjectInitializer);
+	ATDCharacterBase(const FObjectInitializer& ObjectInitializer);
 
 protected:
 	virtual void Tick(float DeltaSeconds) override;
@@ -31,6 +32,7 @@ private:
 	
 	CharacterState CurrentState;
 
+// Getters and Setters
 public:
 	FORCEINLINE UTDCharacterMovementComponent* GetWMovementComponent() const {return MovementComponent;}
 	void SetCharacterState(CharacterState State);

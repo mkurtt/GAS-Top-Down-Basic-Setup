@@ -1,10 +1,10 @@
-#include "Character/TDCharacter.h"
+#include "Character/TDCharacterBase.h"
 
 #include "Components/CapsuleComponent.h"
 #include "GameFramework/CharacterMovementComponent.h"
 #include "Character/Components/TDCharacterMovementComponent.h"
 
-ATDCharacter::ATDCharacter(const FObjectInitializer& ObjectInitializer)
+ATDCharacterBase::ATDCharacterBase(const FObjectInitializer& ObjectInitializer)
 	: Super(ObjectInitializer.SetDefaultSubobjectClass<UTDCharacterMovementComponent>(CharacterMovementComponentName))
 {
 	// Set size for player capsule
@@ -26,13 +26,13 @@ ATDCharacter::ATDCharacter(const FObjectInitializer& ObjectInitializer)
 	PrimaryActorTick.bStartWithTickEnabled = true;
 }
 
-void ATDCharacter::Tick(float DeltaSeconds)
+void ATDCharacterBase::Tick(float DeltaSeconds)
 {
 	Super::Tick(DeltaSeconds);
 }
 
 
-void ATDCharacter::SetCharacterState(CharacterState NewState)
+void ATDCharacterBase::SetCharacterState(CharacterState NewState)
 {
 	if (CurrentState == NewState) return;
 

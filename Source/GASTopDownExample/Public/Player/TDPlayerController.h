@@ -3,11 +3,11 @@
 
 #include "CoreMinimal.h"
 #include "InputMappingContext.h"
-#include "GameFramework/PlayerController.h"
+#include "GAS/GASPlayerControllerBase.h"
 #include "TDPlayerController.generated.h"
 
 UCLASS()
-class GASTOPDOWNEXAMPLE_API ATDPlayerController : public APlayerController
+class GASTOPDOWNEXAMPLE_API ATDPlayerController : public AGASPlayerControllerBase
 {
 	GENERATED_BODY()
 public:

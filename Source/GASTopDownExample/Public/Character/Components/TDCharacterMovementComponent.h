@@ -45,7 +45,7 @@ private:
 	float FollowTime; // For how long it has been pressed
 
 	UPROPERTY()
-	class ATDCharacter* OwnerCharacter;
+	class ATDCharacterBase* OwnerCharacter;
 	UPROPERTY()
 	class ATDPlayerController* OwnerPlayerController;
 	UPROPERTY()
@@ -53,6 +53,7 @@ private:
 	UPROPERTY()
 	class UNavigationSystemV1* NavigationSystem;
 
+//Getters and Setters
 public:
 	
 };
