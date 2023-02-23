@@ -112,6 +112,7 @@ void ATDCameraController::BindActions()
 
 void ATDCameraController::CamMovement(const FInputActionValue& Value)
 {
+	UE_LOG(LogTemp, Warning, TEXT("CamMovement"));
 	if (Value.GetMagnitude() != 0)
 	{
 		XMovement(Value[0]);
